@@ -68,9 +68,9 @@ grub_wait_after_message (void)
 
   endtime = grub_get_time_ms () + 10000;
 
-  while (grub_get_time_ms () < endtime
-	 && grub_getkey_noblock () == GRUB_TERM_NO_KEY);
-
+  /* while (grub_get_time_ms () < endtime
+	 && grub_getkey_noblock () == GRUB_TERM_NO_KEY); */
+  while (grub_get_time_ms () < endtime);
   grub_xputs ("\n");
 }
 
